@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+	/*标签选择器*/
+	/*
+	div{
+		font-size:24px;
+		color:#F00;	
+	}
+	*/
+	
+	
+	/*类选择器*/
+	/*
+	.c1{
+		font-size:36px;
+		color:#00F;
+	}
+	*/
+	
+	/*id选择器*/
+	/*
+	#d1{
+		font-size:24px;
+		color:#0F0;
+		background-color: #B3B3B3;
+	}
+	*/
+	
+	
+	/*并集选择器*/
+	/*
+	.c1,#d1{
+		font-size:24px;
+		color:#0F0;
+	}
+	*/
+	
+	/*交集选择器
+	div里面的span标签
+	*/
+	/*
+	.c1 span{ 
+		font-size:24px;
+		color:#0F0;
+	}
+	*/
+	/*
+	伪类选择器
+	*/
+	
+	/*标签选择器*/
+	div{
+		font-size:24px;
+		color:#0F0;
+	}
+	/*；类选择器，使用时需要加class*/
+	.sty1{
+		border:solid;
+		color:#00F;
+		background-image:url(../pic/35.jpg);
+	}
+	/*id 选择器,使用时需要加id*/
+	#myDiv{
+		color:#F00;
+		font-size:30px;
+		background-color: #B3B3B3;
+	}
+	/* 父子选择器*/
+	#myDir span{
+		font-style:italic;
+		font-size:10px;
+	}
+		/*伪类选择器 注：需要注意顺序link、visited、hover、active*/
+		a:link {
+			color: #FF0000;
+			text-decoration: none;
+		}
+		
+		a:visited {
+			color: #00ff00;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+			color:#FF00FF;
+		}
+		a:active{
+			color:#9FF;
+		}
+	
