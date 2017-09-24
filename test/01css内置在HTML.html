@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css引入方式</title>
+<!--使用link标签引入外部css文件-->
+<link  rel="stylesheet"  href="01cssStudy.css" type="text/css" />
+</head>
+<style type="text/css">
+/*
+CSS 语法由三部分构成：选择器、属性和值
+选择器，常见的有标签选择器、class选择器，id选择器及其他选择器
+css引入方式：1.直接在HTML标签中添加属性，如字体颜色背景等效果----不推荐
+          语法：<元素名 style ="属性名:属性值;属性名:属性值;">
+           2. 在HTML文件中新增一个style 标签，内置需要修饰的css选择器
+		   如，本例子 ---一般。如果是局部引入及学习，可以尝试。但是不能用于其他html文件，不利于维护和重用
+		   3. 外部调用css文件。----推荐。大项目中利于文件的维护和资源重复利用
+		   <link rel="stylesheet" href="general.css"  type="text/css"/>
+		   属性：
+   rel:  标识当前页面文件和引入文件的关系  如果值为stylesheet则代表是修饰与被修饰的关系
+   href：引入外部资源的路径
+   type: 引入外部资源的类型  如果值为text/css则代表引入的文件是一个纯文本的
+*/
+table{
+	border:1px;
+	border-color:green;
+	border-style:solid;
+	margin:auto;
+	width:50%;
+	height:50%;
+	border-collapse:collapse;
+}
+td{
+	border:1px;
+	border-color:red;
+	border-style:solid;
+	font-size:15px;
+	color:blue;
+	font-family:"Courier New", Courier, monospace;
+	text-align:center;
+	padding:5px;
+}
+
+</style>
+
+<body>
+  
+   css引入方式：3.1.style属性[行内样式]----不推荐，得重复定义很多标签<br />
+   在单独制定一个标签的时候使用如：
+   <span style="font-size:18px ; color:#06F; ">1.直接在HTML标签中添加属性</span><br />
+  
+        <span style="font-size: 30px; color: green;">栏目一</span>
+		<br />
+		<span style="font-size: 20px; color: yellow;">栏目二</span>
+		<br />
+		<span style="font-size: 20px; color: blue">栏目三</span>
+		<br />
+		<span style="font-size: 30px; color: red">栏目四</span>
+		<br />
+		<span style="font-size: 30px; color: blue">栏目五</span>
+		<br />
+          css引入方式：3.2.使用&lt;style&gt;标签[内部样式]饰的css，如table\td 都被修饰过了<br />
+    <table>
+    <caption>这是一个普通表格</caption>
+     <tr>
+     <td style="font-size:18px; color:#F0C">第一行</td>
+     <td>第一行</td>
+     </tr>
+      <tr>
+     <td>第二行</td>
+     <td>第二行</td>
+     </tr>
+   </table>
+     css引入方式：3.3.使用&lt;link&gt;标签[外部样式]，如<br />
+     <div>标签选择器</div>
+     <div class="sty1">类选择器</div>
+     <!--父子标签未生效，是不是不是一样的标签啊 -->
+     <span id="myDiv">id选择器<span>父子选择器</span></span>
+     <hr />
+       选择器有优先级：Id选择器>类选择器>html选择器<br />
+       <a href="../pic/4.jpg" target="_new">伪类选择器测试</a>
+       
+</body>
+</html>
